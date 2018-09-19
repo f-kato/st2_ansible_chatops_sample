@@ -1,0 +1,9 @@
+---
+ref: st2_ansible_chatops_sample
+name : st2_ansible_chatops_sample
+description : st2 ansible chatops sample pack
+keywords:
+  - st2_ansible_chatops_sample
+version: 0.0.1
+author : f-kato
+email : f-kato@nttpc.co.jp

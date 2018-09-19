@@ -1,0 +1,10 @@
+---
+name: "chatops_ansible_playbook"
+action_ref: "ansible.playbook"
+description: "run ansible playbook"
+formats:
+    - "ansible_playbook {{inventory_file}} {{playbook}}"
+result:
+    format: |
+        Found 
+            {{ execution.result }}

@@ -1,0 +1,22 @@
+- hosts: all
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: show_command
+      ios_command:
+        provider: "{{ cli }}"
+        commands:
+          - show ip route 
+      register: result
+
+    - name: output
+      debug:
+        msg: "{{ result.stdout[0] }}"
+
+  vars:
+    cli:
+      host: "{{ inventory_hostname }}"
+      username: "{{ ansible_ssh_user }}"
+      password: "{{ ansible_ssh_pass }}"
+      authorize: true
+      auth_pass: "{{ enable_pass }}"

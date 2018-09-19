@@ -1,0 +1,7 @@
+[test]
+10.1.1.1
+
+[test:vars]
+ansible_ssh_user=test
+ansible_ssh_pass=test
+enable_pass=test
